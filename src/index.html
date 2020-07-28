@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
+
+  <link rel="stylesheet" href="./static/css/app.css" />
+  <link rel="stylesheet" href="./static/css/main.css" />
+  <link rel="stylesheet" href="./static/css/fonts.css" />
+  <link rel="stylesheet" href="./static/css/transitions.css" />
+  <link rel="stylesheet" href="./static/css/animations.css" />
+  <link rel="stylesheet" href="./static/css/media.css" />
+
+  <script type="module" src="./static/js/app.js"></script>
+  <script type="text/javascript" src="./static/js/main.js"></script>
+
+</head>
+
+<body>
+  <div class="App Vbox Center">
+    <div class="App-Container">
+
+      <div class="Vbox">
+        <!-- Buttons and other stuff -->
+      </div>
+
+      <div class="Hbox">
+        <div class="Brick-Stack Graphic-Modern js" id="LeftBrickStack"></div>
+        <div class="Game-Container Graphic-Modern js" id="GameContainer"></div>
+        <div class="Brick-Stack Graphic-Modern js" id="RightBrickStack"></div>
+      </div>
+
+      <div class="Vbox">
+        <div class="Vbox">
+          <div class="Vbox Container">
+            <h3>Highscore</h3>
+            <span class="js" id="HighScore">000000</span>
+          </div>
+          <div class="Vbox Container">
+            <h3>Current Score</h3>
+            <span class="js" id="CurrentScore">000000</span>
+          </div>
+          <div class="Vbox Container">
+            <h3>Controls</h3>
+            <div class="Vbox">
+              <p>
+                Move pieces across the grid with either the <b>A</b> <b>D</b> or <b>LEFT</b> and <b>RIGHT</b> arrow 
+                keys respectively.
+              </p>
+              <p>
+                Rotate pieces with either the <b>W</b> or <b>UP</b> arrow keys.
+              </p>
+              <p>
+                Soft drop, which moves pieces down quicker, but doesn't fully drop them, using the <b>S</b> or
+                <b>DOWN</b> arrow keys, and hard drop using <b>SPACE</b>. 
+              </p>
+              <p>
+                Press <b>ANY</b> key to start.
+              </p>
+            </div>
+          </div>
+          <div class="Vbox Container">
+            <h3>Disclaimer</h3>
+            <div class="Vbox">
+              <p>
+                <b>REMEMBER:</b> in <b>SOVIET UNION</b> you do not play <b>TETRIS</b>; <b>TETRIS PLAYS YOU!</b>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="Vbox Center Background js" id="EndScreen">
+    <h1>GДME OVEЯ</h1>
+    <p>ЯEFЯESH TO ЯESTAЯT</p>
+  </div>
+
+  <audio class="js" id="Audio" src="./static/assets/aud/background.mp3" loop></audio>
+</body>
+
+</html>

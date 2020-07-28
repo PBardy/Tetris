@@ -1,0 +1,182 @@
+.App {
+  width: 100%;
+  height: 100%;
+  min-width: 100vw;
+  min-height: 100vh;
+  background: #363636;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.App-Container {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.Game-Container {
+  display: grid;
+  grid-template-rows: repeat(21, 1fr);
+  grid-template-columns: repeat(10, 1fr);
+  width: 47.6190476vh;
+  height: 100vh;
+  background: #CDD6A7;
+}
+
+.Game-Container.Graphic-Modern {
+  background-color: black;
+}
+
+.Game-Container div {
+  background: #CDD6A7;
+  background-size: fit-content;
+  background-position: center center;
+}
+
+.Game-Container div.Graphic-Modern {
+  border: 1px solid #2d2d2d;
+  background-color: black;
+}
+
+.Game-Container div.Texture1, div.Texture2, div.Texture3, div.Texture4, div.Texture5 {
+  border: 8px solid #414141;
+}
+
+.Game-Container div.Texture1 {
+  background-image: url('../assets/img/texture_1.png');
+}
+
+.Game-Container div.Texture2 {
+  background-image: url('../assets/img/texture_2.png');
+}
+
+.Game-Container div.Texture3 {
+  background-image: url('../assets/img/texture_3.png');
+}
+
+.Game-Container div.Texture4 {
+  background-image: url('../assets/img/texture_4.png');
+}
+
+.Game-Container div.Texture5 {
+  background-image: url('../assets/img/texture_5.png');
+}
+
+.Game-Container div.Texture6 {
+  background-size: 100% auto;
+  background-image: url('../assets/img/texture_6.png')!important;
+}
+
+.Brick-Stack {
+  width: 50px;
+  height: 100%;
+  min-height: 100vh;
+  position: relative;
+  background-image: url('../assets/img/brick_texture.png')
+}
+
+.Brick-Stack.Graphic-Modern {
+  background-image: none;
+  background-color: black;
+}
+
+.Brick-Stack:first-child {
+  border-left: 6px solid #CDD6A7;
+}
+
+.Brick-Stack:first-child::before {
+  content: '';
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  background: #1A191F;
+  left: -7px;
+  top: 0;
+}
+
+.Brick-Stack:last-child {
+  border-right: 6px solid #CDD6A7;
+}
+
+.Brick-Stack:last-child:after {
+  content: '';
+  width: 2px;
+  height: 100%;
+  position: absolute;
+  background: #1A191F;
+  right: -7px;
+  top: 0;
+}
+
+.Container {
+  color: #fff;
+  padding: 1em 2em;
+  background: #000;
+  text-align: center;
+  border: 6px solid #CDD6A7;
+  margin-top: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+  position: relative;
+}
+
+.Container::after {
+  content:  '';
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: calc(100% + 12px);
+  height: calc(100% + 12px);
+  box-sizing: content-box;
+  border: 1px solid #1A191F;
+}
+
+.Container h3 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.Container span {
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+.Container p {
+  font-size: 1.25rem;
+  padding: 0.5em 0;
+  margin: 0;
+  line-height: 1.75rem;
+}
+
+.Background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+  will-change: opacity;
+  transition: opacity 3s ease-in-out;
+  font-family: 'Russo One', 'Work Sans', arial, sans-serif;
+}
+
+.Background h1 {
+  color: #fff;
+  font-size: 7rem;
+  font-weight: 900;
+  letter-spacing: 6px;
+}
+
+.Background p {
+  color: #ffffff;
+  font-size: 3rem;
+}
+
+#EndScreen {
+  background-size: 100% 100%;
+  background-position: center center;
+  background-image: url('../assets/img/flag.png');
+}
